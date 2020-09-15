@@ -12,7 +12,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: #f2f2f2">
 	<c:import url="../menu.jsp"/>
 	
 	<div class="container">
@@ -41,8 +41,9 @@
 		    </div>
 		</div>
 		
-		<table class="table table-sm mt-2 table-striped">
-			<thead>
+		<div class="card mt-2 pl-2 pr-2">
+		<table class="table table-sm mt-2 table-hover">
+			<thead class="thead-light">
 		    <tr>
 		      <th scope="col" width="40px">#</th>
 		      <th scope="col">Número do Título</th>
@@ -65,6 +66,7 @@
 			</c:forEach>			 
 		  </tbody>
 		</table>
+		</div>
 	</div>
 
 

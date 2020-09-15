@@ -12,7 +12,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: #f2f2f2">
 	<c:import url="menu.jsp"/>
 	
 	<div class="container mt-2">
@@ -26,7 +26,7 @@
 		    <h5 class="card-title">Alberto Frasson</h5>
 		    <p class="card-text">Engenharia de Software</p>
 		    <p class="card-text">TP03 - Desenvolvimento Web com Java EE</p>
-		    <a href="https://github.com/betofrasson/infnet-2020-dr3tp03" class="btn btn-primary">Git</a>
+		    <a href="https://github.com/betofrasson/infnet-2020-webtp03" class="btn btn-primary">Git</a>
 		  </div>
 		</div>
 	</div>

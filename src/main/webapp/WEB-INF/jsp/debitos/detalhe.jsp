@@ -12,11 +12,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: #f2f2f2">
 	<c:import url="../menu.jsp"/>
 
 	<div class="container">
+		<div class="card p-4 m-4">
 		<h3 class="mt-2">Cadastro de Débito</h3>
+		
+		<hr/>
 		
 		<div class="row mb-2">
 		    <div class="col">
@@ -29,27 +32,26 @@
 		    </div>
 		</div>
 		
-		<form action="/debitos/incluir" class="was-validated" method="post" autocomplete="off">
+		<form action="/debitos/incluir" method="post" autocomplete="off">
 		  <input hidden type="text" class="form-control" id="id" name="id" value=${debito.id}>
 		  <input hidden type="text" class="form-control" id="credor" name="credor" value=${devedor.credor.id}>
 		  <input hidden type="text" class="form-control" id="devedor" name="devedor" value=${devedor.id}>
 		   
 		  <div class="form-group">
-		    <label for="numero">Número do Título:</label>
-		    <input type="text" class="form-control" id="numero" name="numero" placeholder="Digite o Nome" required value=${debito.numero}>
-		    <div class="invalid-feedback">Campo obrigatório</div>
+		    <label for="numero">Número do Título (obrigatório):</label>
+		    <input type="text" class="form-control" id="numero" name="numero" placeholder="Digite o Número do Título" required value=${debito.numero}>
 		  </div>
 		  <div class="form-group">
 		    <label for="parcela">Parcela:</label>
 		    <input type="number" class="form-control" id="parcela" name="parcela" value=${debito.parcela}>
-		    <div class="invalid-feedback">Campo obrigatório</div>
 		  </div>
 		  
-		  <button type="submit" class="mt-3 btn btn-primary">Cadastrar</button>
+		  <hr/>
+		  
+		  <button type="submit" class="btn btn-primary">Cadastrar</button>
+		  <a href="/devedores/debitos/${devedor.id}">Cancelar / Voltar</a>
 		</form>
-		
-		<br/>
-		<a href="/devedores/debitos/${devedor.id}">Voltar</a>
+		</div>
 	</div>
 	
 </body>

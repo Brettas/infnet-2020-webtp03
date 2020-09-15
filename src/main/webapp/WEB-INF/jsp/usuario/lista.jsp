@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Quero Pagar - Credores</title>
+	<title>Quero Pagar - Usuários</title>	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -19,15 +19,8 @@
 	
 		<div class="row mt-2">
 			<div class="col">
-				<h3>Lista de Empresas / Credores</h3>	
+				<h3>Lista de Usuários</h3>	
 			</div>			
-			<div class="col">
-				<form action="/credores/cadastro" method="get">
-				<button class="btn btn-info float-right" type="submit"> 
-					Cadastrar Novo Credor  
-	             </button>
-	             </form> 		
-			</div>
 		</div>
 		
 		<div class="card mt-2 pl-2 pr-2">
@@ -35,29 +28,16 @@
 			<thead class="thead-light">
 		    <tr>
 		      <th scope="col" width="40px">#</th>
-		      <th scope="col">Razão Social</th>
-		      <th scope="col">CNPJ</th>
-		      <th scope="col" width="80px">Status</th>
-		      <th scope="col" width="100px">Operação</th>
+		      <th scope="col">Nome</th>
+		      <th scope="col">Login</th>
 		    </tr>
 		  </thead>
 		  <tbody>
-			  <c:forEach var="item" items="${credores}">
+			  <c:forEach var="item" items="${usuarios}">
 			  <tr>
-			  	<td>${item.id}</td> 
-	 		    <td>${item.razaosocial}</td> 
-	 		    <td>${item.cnpj}</td>
-	 		    <td>
-	 		    <c:if test="${item.ativo == true}"><span class="badge badge-success">Ativo</span></c:if>
-	 		    <c:if test="${item.ativo != true}"><span class="badge badge-secondary">Inativo</span></c:if>
-	 		    </td>
-	 		    <td>
-	 		    <div class="row">
-	 		    	<a href="/credores/cadastro/${item.id}">Editar</a>
-	 		    	&nbsp;-&nbsp;
-	 		    	<a href="/credores/excluir/${item.id}">Excluir</a>
-	 		    </div>
-	 		    </td>
+			  	<td>${item.id}</td>  
+	 		    <td>${item.nome}</td> 
+	 		    <td>${item.login}</td>
 	 		  </tr> 
 			  </c:forEach>
 		  </tbody>

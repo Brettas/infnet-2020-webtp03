@@ -25,4 +25,14 @@ public class UsuarioController {
 		
 		return "login";
 	}	
+	
+	@RequestMapping(value = "/usuarios", method = RequestMethod.GET)
+	public String showInit(
+			Model model
+			) {
+		
+		model.addAttribute("usuarios", usuarioService.obterLista());
+		
+		return "usuario/lista";
+	}
 }

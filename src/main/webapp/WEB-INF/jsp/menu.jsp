@@ -22,6 +22,9 @@
 	        <a class="nav-link" href="/inicio">Inicio</a> 
 	      </li>
 	      <li class="nav-item">
+	        <a class="nav-link" href="/usuarios">Usuários</a> 
+	      </li>
+	      <li class="nav-item">
 	        <a class="nav-link" href="/credores">Empresas / Credores</a> 
 	      </li>
 	      <li class="nav-item">
@@ -30,7 +33,7 @@
 	      
 	    </ul>
 	    
-	    <h5 class="mr-2">${user}</h5>
+	    <h5 class="mr-2" style="color: #ffffff">${user}</h5>
 	    
 	    <form class="form-inline my-2 my-lg-0" action="/sair" method="get">
 		    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>

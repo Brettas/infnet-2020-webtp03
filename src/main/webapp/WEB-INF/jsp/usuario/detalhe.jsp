@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>AppGrana</title>
+  <title>Quero Pagar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -11,16 +11,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </head>
-<body>	
+<body style="background-color: #f2f2f2">
 	<div class="container">
 	
 		<div class="container-fluid" style="margin-top:80px">
 
 			<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-			  <a class="navbar-brand" href="/sair">AppCobranças</a>
+			  <a class="navbar-brand" href="/sair">Quero Pagar</a>
 			</nav>
 			
+			<div class="card p-4 m-4">
+			
 			<h2>Cadastro de Usuários</h2>	
+			
+			<hr/>
 
 			<form action="/usuario" method="post" autocomplete="off">
 			
@@ -39,10 +43,13 @@
 			    <input type="password" class="form-control" id="senha" name="senha" required>
 			  </div>
 			
-			  <button type="submit" class="btn btn-primary">Cadastrar</button>
-			</form>
+			  <hr/>
 			
-	  		<p><a href="/voltar">Voltar</a></p>
+			  <button type="submit" class="btn btn-primary">Cadastrar</button>
+			  <a href="/voltar">Cancelar / Voltar</a>
+			</form>
+			</div>
+				  		
   		</div>
 	</div>
 

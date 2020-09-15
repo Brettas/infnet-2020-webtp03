@@ -12,29 +12,31 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background-color: #f2f2f2">
 	<c:import url="../menu.jsp"/>
 
 	<div class="container">
+		<div class="card p-4 m-4">
 		<h3 class="mt-2">Cadastro de Empresa/Credor</h3>
 		
-		<form action="/credores/incluir" class="was-validated" method="post" autocomplete="off">
+		<hr/>
+		
+		<form action="/credores/incluir" method="post" autocomplete="off">
 		  <input hidden type="text" class="form-control" id="id" name="id" value=${credor.id}>
 		   
 		  <div class="form-group">
-		    <label for="razaosocial">Razão Social:</label>
+		    <label for="razaosocial">Razão Social (obrigatório):</label>
 		    <input type="text" class="form-control" id="razaosocial" name="razaosocial" placeholder="Digite a Razão Social" required value=${credor.razaosocial}>
 		    <div class="invalid-feedback">Campo obrigatório</div>
 		  </div>
 		  <div class="form-group">
-		    <label for="cnpj">CNPJ:</label>
+		    <label for="cnpj">CNPJ (obrigatório):</label>
 		    <input type="text" class="form-control" id="cnpj" name="cnpj" placeholder="Digite o CNPJ" maxlength="14" required value=${credor.cnpj}>
 		    <div class="invalid-feedback">Campo obrigatório</div>
 		  </div>
 		  <div class="form-group">
 		    <label for="senha">Senha:</label>
-		    <input type="text" class="form-control" id="senha" name="senha" placeholder="Digite a Senha" required value=${credor.senha}>
-		    <div class="invalid-feedback">Campo obrigatório</div>
+		    <input type="text" class="form-control" id="senha" name="senha" placeholder="Digite a Senha" value=${credor.senha}>
 		  </div>
 		  <div class="form-check">
 		    <input type="checkbox" class="form-check-input" id="ckativo" name="ativo" 
@@ -43,11 +45,13 @@
 		    <label class="form-check-label" for="ckativo">Ativo ?</label>
 		  </div>
 		  
-		  <button type="submit" class="mt-3 btn btn-primary">Cadastrar</button>
+		  <hr/>
+		  
+		  <button type="submit" class="btn btn-primary">Cadastrar</button>
+		  <a href="/credores">Cancelar / Voltar</a>
 		</form>
 		
-		<br/>
-		<a href="/credores">Voltar</a>
+		</div>
 	</div>
 	
 </body>
