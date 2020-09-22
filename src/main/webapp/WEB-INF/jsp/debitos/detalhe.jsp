@@ -39,17 +39,25 @@
 		   
 		  <div class="form-group">
 		    <label for="numero">Número do Título (obrigatório):</label>
-		    <input type="text" class="form-control" id="numero" name="numero" placeholder="Digite o Número do Título" required value=${debito.numero}>
+		    <input type="text" class="form-control" id="numero" name="numero" required value=${debito.numero}>
 		  </div>
 		  <div class="form-group">
 		    <label for="parcela">Parcela:</label>
 		    <input type="number" class="form-control" id="parcela" name="parcela" value=${debito.parcela}>
 		  </div>
+		   <div class="form-group">
+		    <label for="vencimento">Vencimento:</label>
+		    <input type="date" class="form-control" id="vencimento" name="vencimento" value=${debito.vencimento}>
+		  </div>
+		   <div class="form-group">
+		    <label for="valor">Valor:</label>
+		    <input type="number" class="form-control" id="valor" name="valor" value=${debito.valor}>
+		  </div>
 		  
 		  <hr/>
 		  
 		  <button type="submit" class="btn btn-primary">Cadastrar</button>
-		  <a href="/devedores/debitos/${devedor.id}">Cancelar / Voltar</a>
+		  <a href="/devedores/debitos/${devedor.id}" class="btn btn-warning text-white">Cancelar / Voltar</a>
 		</form>
 		</div>
 	</div>

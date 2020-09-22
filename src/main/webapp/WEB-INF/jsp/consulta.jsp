@@ -26,22 +26,17 @@
   <div class="d-flex flex-column">
 	<div class="d-flex justify-content-center align-self-center">
 		<div class="card card-container p-4" style="width: 600px;">
-		<form action="/login" method="post">
+		<form action="/loginconsulta" method="post">
 
 		  <div class="form-group">			  
-		    <label for="uname">Usuário:</label>
-		    <input type="text" class="form-control" id="uname" name="login" placeholder="Digite o usuário" required>
-		  </div>
-		  
-		  <div class="form-group">
-		    <label for="pwd">Senha:</label>
-		    <input type="password" class="form-control" id="pwd" name="senha" placeholder="Digite a senha" required>
-		  </div>		  
+		    <label for="uname">CPF/CNPJ:</label>
+		    <input type="text" class="form-control" id="uname" name="cpf" placeholder="Digite seu CPF/CNPJ" required>
+		  </div>	  
 		  		  
-			<button type="submit" class="btn btn-primary">ACESSO ADMIN</button>
+			<button type="submit" class="btn btn-primary">CONSULTAR MEUS DÉBITOS</button>
 			<a href="https://github.com/betofrasson/infnet-2020-webtp03" class="btn btn-success">Git</a>		  		  
 		  
-		  	<a href="/consulta" class="btn btn-warning text-white float-right">CONSULTAR MEUS DÉBITOS</a>
+		  	<a href="/login" class="btn btn-warning text-white float-right">ACESSO ADMIN</a>
 		  
 		 </form>
 	  	 </div>

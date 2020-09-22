@@ -14,4 +14,10 @@ public interface IDebitoRepository extends CrudRepository<Debito, Integer>{
 
 	@Query("from Debito d where d.devedor.id =:devedor order by d.numero DESC")
 	List<Debito> obterListaPorDevedor(@Param("devedor") Integer devedor);
+	
+	@Query("from Debito where status='aberto'")
+	List<Debito> obterQtdeAbertos();
+	
+	@Query("SELECT SUM(valor) from Debito where status='aberto'")
+	Float obterSaldo();
 }

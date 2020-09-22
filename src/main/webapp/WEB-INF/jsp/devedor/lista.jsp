@@ -22,13 +22,18 @@
 				<h3>Lista de Devedores</h3>	
 			</div>			
 			<div class="col">
-				<form action="/devedores/cadastro" method="get">
-				<button class="btn btn-info float-right" type="submit"> 
-					Cadastrar Novo Devedor  
-	             </button>
-	             </form> 		
+				<a href="/devedores/cadastro" class="btn btn-info float-right">Cadastrar Novo Devedor</a>
 			</div>
 		</div>
+		
+		<hr/>
+		
+		<form class="form-inline" action="/devedores/localizar" method="get" autocomplete="off">
+		  <div class="form-group mx-sm-3 mb-2">
+		    <input type="text" class="form-control" name="tx_nome" placeholder="Localizar devedor">
+		  </div>
+		  <button type="submit" class="btn btn-primary mb-2">Localizar</button>
+		</form>						
 		
 		<div class="card mt-2 pl-2 pr-2">
 		<table class="table table-sm mt-2 table-hover">

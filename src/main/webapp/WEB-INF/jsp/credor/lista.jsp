@@ -22,11 +22,7 @@
 				<h3>Lista de Empresas / Credores</h3>	
 			</div>			
 			<div class="col">
-				<form action="/credores/cadastro" method="get">
-				<button class="btn btn-info float-right" type="submit"> 
-					Cadastrar Novo Credor  
-	             </button>
-	             </form> 		
+				<a href="/credores/cadastro" class="btn btn-info float-right">Cadastrar Novo Credor</a>
 			</div>
 		</div>
 		

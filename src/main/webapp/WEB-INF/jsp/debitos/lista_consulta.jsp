@@ -13,18 +13,14 @@
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
-<body style="background-color: #f2f2f2">
-	<c:import url="../menu.jsp"/>
+<body style="background-color: #f2f2f2">	
 	
-	<div class="container">
+	<div class="container">		
 				
 		<div class="row mt-2">
 			<div class="col">
 				<h3>Lista de Débitos</h3>	
 			</div>			
-			<div class="col">
-				<a href="/devedores/debitos/${devedor.id}/cadastrar" class="btn btn-info float-right">Cadastrar Novo Débito</a>		
-			</div>
 		</div>
 		
 		<div class="row">
@@ -48,7 +44,6 @@
 		      <th scope="col">Vencimento</th>
 		      <th scope="col">Valor</th>
 		      <th scope="col" width="80px">Status</th>
-		      <th scope="col" width="90px">Operação</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -69,17 +64,15 @@
 				 	<c:if test="${item.status == 'aberto'}"><span class="badge badge-success">Aberto</span></c:if>
 	 		    	<c:if test="${item.status != 'aberto'}"><span class="badge badge-secondary">Quitado</span></c:if>				 
 				 </td>
-				 <td>
-	 		     <div class="row">	 		    
-	 		    	<c:if test="${item.status == 'aberto'}"><a href="/debitos/quitar/${item.id}">Quitar</a></c:if>
-	 		    	<c:if test="${item.status != 'aberto'}"><a href="/debitos/abrir/${item.id}">Reabrir</a></c:if>
-	 		    </div>
-	 		    </td>
 			 </tr>
 			</c:forEach>			 
 		  </tbody>
 		</table>
 		</div>
+		
+		<hr/>
+		  
+		<a href="/consulta" class="btn btn-warning text-white">Voltar</a>
 	</div>
 
 

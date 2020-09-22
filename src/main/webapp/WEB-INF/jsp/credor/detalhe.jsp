@@ -48,7 +48,7 @@
 		  <hr/>
 		  
 		  <button type="submit" class="btn btn-primary">Cadastrar</button>
-		  <a href="/credores">Cancelar / Voltar</a>
+		  <a href="/credores" class="btn btn-warning text-white">Cancelar / Voltar</a>
 		</form>
 		
 		</div>

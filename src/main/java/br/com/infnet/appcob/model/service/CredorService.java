@@ -31,4 +31,8 @@ public class CredorService {
 		return credorRepository.findById(id).orElse(new Credor(0));
 	}
 	
+	public List<Credor> obterAtivos(){ 
+		return credorRepository.obterAtivos();
+	}
+	
 }

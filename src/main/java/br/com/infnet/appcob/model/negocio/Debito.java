@@ -1,5 +1,7 @@
 package br.com.infnet.appcob.model.negocio;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -7,6 +9,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "TDebito")
@@ -17,6 +21,10 @@ public class Debito {
 	private Integer id;
 	private String numero;
 	private Integer parcela;
+	private String status;
+	private Float valor;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate vencimento;
 	
 	@ManyToOne
 	@JoinColumn(name = "idCredor")
@@ -25,6 +33,14 @@ public class Debito {
 	@ManyToOne
 	@JoinColumn(name = "idDevedor")
 	private Devedor devedor;
+
+	public Debito(){
+		
+	}
+	
+	public Debito(int i) {		
+		// TODO Auto-generated constructor stub
+	}
 
 	public Integer getId() {
 		return id;
@@ -64,6 +80,30 @@ public class Debito {
 
 	public void setDevedor(Devedor devedor) {
 		this.devedor = devedor;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public Float getValor() {
+		return valor;
+	}
+
+	public void setValor(Float valor) {
+		this.valor = valor;
+	}
+
+	public LocalDate getVencimento() {
+		return vencimento;
+	}
+
+	public void setVencimento(LocalDate vencimento) {
+		this.vencimento = vencimento;
 	}
 
 }

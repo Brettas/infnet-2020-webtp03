@@ -23,11 +23,20 @@ public class DevedorService {
 		devedorRepository.deleteById(id);
 	}
 	
+	public List<Devedor> obterListaPorNome(String nome){ 
+		return devedorRepository.findByNome(nome);
+	}
+	
 	public List<Devedor> obterLista(){ 
 		return devedorRepository.findAll(Sort.by(Sort.Direction.ASC, "nome"));
 	}
 	
+	
 	public Devedor obterPorId(Integer id) {
 		return devedorRepository.findById(id).orElse(new Devedor(0));
+	}
+	
+	public Devedor devedorExist(String cpf) {
+		return devedorRepository.findByCpf(cpf);
 	}
 }

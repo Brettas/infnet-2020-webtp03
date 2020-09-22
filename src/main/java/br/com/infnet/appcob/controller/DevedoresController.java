@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import br.com.infnet.appcob.model.negocio.Devedor;
 import br.com.infnet.appcob.model.service.CredorService;
@@ -72,6 +73,20 @@ public class DevedoresController {
 		devedorService.excluir(id);
 
 		return showInit(model);
+	}
+	
+	@RequestMapping(value = "/devedores/localizar", method = RequestMethod.GET)
+	public String localizar(
+			Model model,
+			@RequestParam(value="tx_nome") String nome
+			) {
+				
+		if (nome.equals("") == false)
+			model.addAttribute("devedores", devedorService.obterListaPorNome(nome));
+		else
+			model.addAttribute("devedores", devedorService.obterLista());
+		
+		return "devedor/lista";
 	}
 
 }

@@ -22,4 +22,16 @@ public class DebitoService {
 		return debitoRepository.obterListaPorDevedor(devedor);
 	}
 	
+	public List<Debito> obterQtdeAbertos() {
+		return debitoRepository.obterQtdeAbertos();
+	}
+	
+	public Float obterSaldo() {
+		return debitoRepository.obterSaldo();
+	}
+	
+	public Debito obterPorId(Integer id) {
+		return debitoRepository.findById(id).orElse(new Debito(0));
+	}
+	
 }

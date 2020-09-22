@@ -50,8 +50,51 @@ public class DebitosController {
 				Debito debito
 			) {
 		
+		debito.setStatus("aberto");
 		debitoService.incluir(debito);
 		
 		return lista(model, debito.getDevedor().getId());
+	}
+	
+	@RequestMapping(value = "/debitos/quitar/{id}", method = RequestMethod.GET)
+	public String quitar(
+			Model model,
+			@PathVariable Integer id
+			) {
+		
+		Debito debito = debitoService.obterPorId(id);
+		debito.setId(id);		
+		debito.setStatus("quitado");
+		debitoService.incluir(debito);
+
+		return lista(model, debito.getDevedor().getId());
+	}
+	
+	@RequestMapping(value = "/debitos/abrir/{id}", method = RequestMethod.GET)
+	public String abrir(
+			Model model,
+			@PathVariable Integer id
+			) {
+		
+		Debito debito = debitoService.obterPorId(id);
+		debito.setId(id);		
+		debito.setStatus("aberto");
+		debitoService.incluir(debito);
+
+		return lista(model, debito.getDevedor().getId());
+	}
+	
+	@RequestMapping(value = "/devedores/debitos_consulta/{id}", method = RequestMethod.GET)
+	public String consulta(
+			Model model,
+			@PathVariable Integer id
+			) {
+		
+		Devedor devedor = devedorService.obterPorId(id);
+		model.addAttribute("devedor", devedor);
+		
+		model.addAttribute("debitos", debitoService.obterListaPorDevedor(id));
+		
+		return "debitos/lista_consulta";
 	}
 }
