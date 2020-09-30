@@ -26,7 +26,7 @@
   <div class="d-flex flex-column">
 	<div class="d-flex justify-content-center align-self-center">
 		<div class="card card-container p-4" style="width: 600px;">
-		<form action="/loginconsulta" method="post">
+		<form action="/loginconsulta" method="post" autocomplete="off">
 
 		  <div class="form-group">			  
 		    <label for="uname">CPF/CNPJ:</label>

@@ -25,7 +25,7 @@
 	        <a class="nav-link" href="/usuarios">Usuários</a> 
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="/credores">Empresas / Credores</a> 
+	        <a class="nav-link" href="/credores">Empresas / Credores (API)</a> 
 	      </li>
 	      <li class="nav-item">
 	        <a class="nav-link" href="/devedores">Devedores</a>

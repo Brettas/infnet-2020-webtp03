@@ -29,7 +29,7 @@
 			        <div class="col-md-4 col-xl-3">
 			            <div class="card bg-c-blue order-card">
 			                <div class="card-block">
-			                    <h6 class="m-b-20">Credores Ativos</h6>
+			                    <h6 class="m-b-20">Credores Ativos (API)</h6>
 			                    <h2 class="text-right"><i class="fa fa-building f-left"></i><span>${fn:length(credores)}</span></h2>
 			                </div>
 			            </div>

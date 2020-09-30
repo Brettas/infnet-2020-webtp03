@@ -1,13 +1,9 @@
 package br.com.infnet.appcob.model.negocio;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -21,9 +17,6 @@ public class Credor {
 	private String cnpj;
 	private String senha;
 	private Boolean ativo;
-	
-//	@OneToMany(mappedBy = "devedor", cascade = CascadeType.DETACH)
-//	private List<Devedor> devedores;
 	
 	@Override
 	public String toString() {
